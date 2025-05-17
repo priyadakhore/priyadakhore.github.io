@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sample Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      padding: 40px;
+    }
+    .form-container {
+      max-width: 600px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+    h2 {
+      text-align: center;
+      color: #202124;
+    }
+    label {
+      display: block;
+      margin: 15px 0 5px;
+      color: #202124;
+      font-weight: 500;
+    }
+    input[type="text"], input[type="email"], textarea, select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #dadce0;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    input[type="radio"], input[type="checkbox"] {
+      margin-right: 10px;
+    }
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      background-color: #1a73e8;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #155ab6;
+    }
+  </style>
+</head>
+<body>
+
+<div class="form-container">
+  <h2>Sample Google-Style Form</h2>
+  <form action="your-form-handler.php" method="POST">
+
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email" required>
+
+    <label>Gender</label>
+    <label><input type="radio" name="gender" value="Male" required> Male</label>
+    <label><input type="radio" name="gender" value="Female"> Female</label>
+
+    <label>Which skills do you have?</label>
+    <label><input type="checkbox" name="skills" value="Python"> Python</label>
+    <label><input type="checkbox" name="skills" value="SQL"> SQL</label>
+    <label><input type="checkbox" name="skills" value="Excel"> Excel</label>
+
+    <label for="feedback">Any Comments</label>
+    <textarea id="feedback" name="feedback" rows="4"></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+</body>
+</html>
